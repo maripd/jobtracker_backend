@@ -1,5 +1,6 @@
 const express = require('express')
-const routes = require('./routes/jobdetailsroute')
+const routes = require('./routes')
+// const routes = require('./routes/index.js')
 const db = require('./db')
 const logger = require('morgan')
 const cors = require('cors')

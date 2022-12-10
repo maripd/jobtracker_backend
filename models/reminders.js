@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const Reminders = new Schema(
   {
-    jobId: { type: String, required: true },
+    // jobId: { type: String, required: true },
     reminderText: { type: String, required: true },
     isComplete: { type: Boolean, required: true }
   },
