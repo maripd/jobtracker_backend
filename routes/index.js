@@ -11,6 +11,7 @@ router.delete('/deletejob/:id', controllers.deleteJobCard)
 
 router.post('/createreminder', controllers.createReminder)
 router.get('/getallreminders', controllers.getAllReminders)
+router.get('/getallreminders-job/:jobId', controllers.getAllRemindersByJobId)
 router.get('/getreminder/:id', controllers.getReminderById)
 router.put('/updatereminder/:id', controllers.updateReminder)
 router.delete('/deletereminder/:id', controllers.deleteReminder)

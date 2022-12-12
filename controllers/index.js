@@ -80,6 +80,16 @@ const getAllReminders = async (req, res) => {
   }
 }
 
+const getAllRemindersByJobId = async (req, res) => {
+  const jobId = req.params.jobId
+  try {
+    const allReminders = await reminderDetails.find({ jobId: jobId })
+    await res.status(200).json({ allReminders })
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 const getReminderById = async (req, res) => {
   try {
     const reminderId = req.params.id
@@ -167,6 +177,7 @@ const deleteUser = async (req, res) => {
     const deleteUser = await userDetails.findByIdAndDelete(userId)
     console.log(deleteUser)
     return res.status(200).json({ deleteUser })
+    // return res.status(200).send('deleted user')
   } catch (error) {
     console.log(error)
     return res.status(500).send(error.message)
@@ -188,6 +199,7 @@ module.exports = {
   getAllUsers,
   getUserById,
   updateUser,
-  deleteUser
+  deleteUser,
+  getAllRemindersByJobId
 }
 0
