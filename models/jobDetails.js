@@ -5,13 +5,13 @@ const JobDetails = new Schema(
   {
     companyName: { type: String, required: true },
     jobTitle: { type: String, required: true },
-    hiringStatus: { type: String, required: true },
-    jobDateAdded: { type: String, required: true },
-    dateApplied: { type: String, required: true },
+    hiringStatus: { type: String },
+    jobDateAdded: { type: String },
+    dateApplied: { type: String },
     applicationStatus: { type: String, required: true },
-    contactEmail: { type: String, required: true },
-    notes: { type: String, required: true },
-    urls: { type: String, required: true }
+    contactEmail: { type: String },
+    notes: { type: String },
+    urls: { type: String }
   },
   { timestamps: true }
 )
